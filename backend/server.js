@@ -1,8 +1,11 @@
 //creating the server
 const express = require("express")
 const { errorHandler } = require("./middleware/errorHandler")
+const { connectDb } = require("./config/dbConnection")
 const dotenv = require("dotenv").config()
 const PORT = process.env.PORT || 5000
+
+connectDb();
 
 //initializing the app
 const app = express()
