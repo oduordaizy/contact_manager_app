@@ -14,6 +14,7 @@ const app = express()
 // The middleware will help parse data entered by the client in the body.
 app.use(express.json())
 app.use('/api/contacts', require("./routes/contactRoutes"))
+app.use('/api/users', require("./routes/userRoutes"))
 app.use(errorHandler)
 
 
